@@ -1,0 +1,137 @@
+*{
+	box-sizing: border-box;
+}
+html{
+	overflow: hidden !important;
+}
+.v-btn{
+	letter-spacing: unset !important;
+}
+.v-application--wrap{
+	// background: rgb(49,40,34);
+	align-items: center;
+}
+.d-item.v-list-item{
+	display: flex;
+    justify-content: center;
+	.mdi{
+		font-size: 20px;
+		// color: #9e938b;
+	}
+	&:hover{
+		.mdi{
+			// color: #e28413;
+		}
+	}
+	.v-list-item__avatar{
+		align-self: unset !important;
+	}
+}
+.v-navigation-drawer{
+	box-shadow: 5px 0px 10px -2px rgba(0, 0, 0, 0.2);
+}
+.d-card{
+	&.d-results{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		&:hover{
+			cursor: grab;
+		}
+		.v-card__title{
+			text-align: center !important;
+		}
+	}
+	.v-card__title{
+		display: block;
+		font-weight: 400 !important;
+		background: #1b1511;
+		padding: 16px !important;
+	}
+	.v-card__text{
+		padding: 25px !important;
+		.d-results-a{
+			font-size: 20px;
+			font-weight: 600;
+			color: white;
+			span{
+				font-size: 13px;
+				font-weight: 400;
+				color: #9e938b;
+			}
+		}
+	}
+}
+
+.t-container{
+	height: 100%;
+    width: 100%;
+	max-width: 960px;
+	margin-left: 56px;
+	// .simplebar-content{
+	// 	padding: 0px 20px;
+	// }
+	// transition: 0.1s;
+	// will-change: margin-top;
+	.t-wpm{
+		font-size: 43px;
+		font-weight: 400;
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		max-width: 960px;
+		padding: 0 30px;
+		padding-bottom: 30px;
+		text-align: center;
+		color: white;
+		height: 40%;
+		z-index: 2;
+		.t-chart-container{
+			height: 100%;
+			display: flex;
+			position: relative;
+			& > div{
+				width: 100%;
+			}
+			.t-abs-wpm{
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+	.t-input{
+		position: fixed;
+		width: 100%;
+		max-width: 900px;
+		bottom: calc(50% - 56px);
+		font-size: 24px;
+		margin-left: 30px !important;
+		z-index: 2;
+	}
+	.t-text{
+		padding: 0px 30px;
+		padding-top: 100px;
+		font-size: 22px;
+		line-height: 39px;
+		font-weight: 300;
+		word-spacing: 1.5px;
+		color: rgb(216, 214, 208);
+		height: 100vh;
+		// overflow-y: scroll;
+		.t-success{
+			background: rgba(0, 93, 87, 1);
+		}
+		.t-fail{
+			background: red;
+		}
+	}
+	.t-bottom-gradient{
+		height: 75%;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		z-index: 1;
+		bottom: 0;
+		background: linear-gradient(0deg, rgba(18,18,18,0.95) 69%, rgba(158,43,203,0) 100%);
+	}
+}
