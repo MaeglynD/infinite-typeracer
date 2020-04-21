@@ -317,6 +317,8 @@ export default {
 				this.correct_text += v;
 				if (this.active_word === this.word_array.length - 1) {
 					// end of material
+					// eslint-disable-next-line no-alert
+					alert('You won!');
 				} else {
 					// prepare new word
 					this.active_word += 1;
