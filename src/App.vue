@@ -272,39 +272,39 @@ export default {
 			this.is_fullscreen = !this.is_fullscreen;
 		},
 		// This function divides the text into lines as they appear on screen
-		// async get_all_strings(text) {
-		// 	const canvas = document.createElement('canvas');
-		// 	const context = canvas.getContext('2d');
-		// 	context.font = '22px Roboto';
+		async get_all_strings(text) {
+			const canvas = document.createElement('canvas');
+			const context = canvas.getContext('2d');
+			context.font = '22px Roboto';
 
-		// 	// eslint apparently is braindead
-		// 	// eslint-disable-next-line no-unused-vars
-		// 	let width = 0;
-		// 	let current_string = '';
-		// 	const all_words = [];
+			// eslint apparently is braindead
+			// eslint-disable-next-line no-unused-vars
+			let width = 0;
+			let current_string = '';
+			const all_words = [];
 
-		// 	text.split(' ').forEach((x, i, a) => {
-		// 		const sentence = current_string.length ? `${current_string} ${x}` : x;
-		// 		const text_width = context.measureText(sentence).width + (0.35 * (all_words.length - 2));
+			text.split(' ').forEach((x, i, a) => {
+				const sentence = current_string.length ? `${current_string} ${x}` : x;
+				const text_width = context.measureText(sentence).width + (0.35 * (all_words.length - 2));
 
-		// 		if (i === a.length - 1) {
-		// 			if (text_width > 885) {
-		// 				all_words.push(current_string);
-		// 				all_words.push(x);
-		// 			} else {
-		// 				all_words.push(sentence);
-		// 			}
-		// 		} else if (text_width > 885) {
-		// 			all_words.push(current_string);
-		// 			current_string = x;
-		// 			width = context.measureText(x).width;
-		// 		} else {
-		// 			current_string = sentence;
-		// 			width = text_width;
-		// 		}
-		// 	});
-		// 	return all_words;
-		// },
+				if (i === a.length - 1) {
+					if (text_width > 885) {
+						all_words.push(current_string);
+						all_words.push(x);
+					} else {
+						all_words.push(sentence);
+					}
+				} else if (text_width > 885) {
+					all_words.push(current_string);
+					current_string = x;
+					width = context.measureText(x).width;
+				} else {
+					current_string = sentence;
+					width = text_width;
+				}
+			});
+			return all_words;
+		},
 	},
 	watch: {
 		user_input(value) {
